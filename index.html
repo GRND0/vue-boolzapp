@@ -36,6 +36,14 @@
 
                 </div>
                 <div class="chat-centrale">
+                    <div class="colonna-chat" v-for="(item,index) in contacts">
+                        <div class="messaggio" :class= "item.messages[0].status"  >
+                            <span>{{item.messages[0].message}}</span>
+                        </div>
+
+
+                    </div>
+
 
                 </div>
                 <div class="input-testo-chat">
@@ -84,7 +92,7 @@
                 </div>
                 <div class="strip" v-for="(item,index) in contacts">
                     <div class="contenitore-avatar ">
-                        <img class="avatar" :src="'img/'+ 'item.avatar' +'.jpg'" alt="">
+                        <img class="avatar" :src="'img/avatar'+ item.avatar +'.jpg'" alt="">
                         <span>{{ item.name }}</span>
                     </div>
 

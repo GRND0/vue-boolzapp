@@ -114,7 +114,27 @@ i {
 
 .chat-centrale {
     width: 100% ;
+    padding-top: 2rem;
     height: calc(100% - 120px);
-    background-image: url(/img/mine.jpg);
+    background-image: url(../img/mine.jpg);
     
+}
+
+.colonna-chat {
+    width: 80% ;
+    margin: 0 auto ;
+}
+
+.messaggio {
+    width: 50% ;
+    padding: 1rem ;
+    border-radius: 10px ;
+    
+}
+
+.received {
+    background-color: white ;
+}
+.sent {
+    background-color: #d5f9ba;
 }
