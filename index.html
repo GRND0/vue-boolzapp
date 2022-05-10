@@ -19,6 +19,41 @@
     <div id="root">
         <div class="container clearfix">
             <div class="container-destro float-destro">
+                <div class="chat-attiva">
+                    <div class="strip">
+
+                        <div class="contenitore-avatar ">
+                            <img class="avatar" src="img\avatar_io.jpg" alt="">
+                            <span>Sofia</span>
+                        </div>
+    
+                        <div class="contenitore-icone ">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="chat-centrale">
+
+                </div>
+                <div class="input-testo-chat">
+                    <div class="strip">
+
+                        <div class="contenitore-avatar ">
+                            <img class="avatar" src="img\avatar_io.jpg" alt="">
+                            <span>Sofia</span>
+                        </div>
+    
+                        <div class="contenitore-icone ">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
             <div class="container-sinistro">
@@ -44,14 +79,22 @@
 
                 </div>
                 <div class="strip-ricerca">
-                    <i class="fas fa-search"></i>
+                    <button class="pulsante-ricerca" type="submit"><i class="fa fa-search"></i></button>
                     <input class="barra-ricerca" type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <div class="strip" v-for="(item,index) in contacts">
+                    <div class="contenitore-avatar ">
+                        <img class="avatar" :src="'img/'+ 'item.avatar' +'.jpg'" alt="">
+                        <span>{{ item.name }}</span>
+                    </div>
+
+
                 </div>
             </div>
         </div>
 
     </div>
-
+   
     <script src="data.js"></script>
 </body>
 

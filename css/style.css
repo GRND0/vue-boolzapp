@@ -97,12 +97,24 @@ i {
     width: 100%;
     height: 40px;
     background-color: #eaeaea;
+}
 
-
+.pulsante-ricerca {
+    background-color: white ;
+    border: none;
+    height: 80% ;
 }
 
 .barra-ricerca {
     height: 80%;
     width: 95%;
+    border: none;
+    
+}
+
+.chat-centrale {
+    width: 100% ;
+    height: calc(100% - 120px);
+    background-image: url(/img/mine.jpg);
     
 }
