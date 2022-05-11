@@ -168,11 +168,16 @@ const app = new Vue(
 
             utenteSelezionato: 0,
             testoInserito: "",
+            ricercaContatti: "",
         },
 
         methods: {
             selettore: function (index) {
                 this.utenteSelezionato = index;
+            },
+
+            filtro: function() {
+
             },
 
             risposta: function () {
@@ -194,5 +199,6 @@ const app = new Vue(
                 this.testoInserito = "";
                 setTimeout(this.risposta, 1000)
             },
+
         }
     })
