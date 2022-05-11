@@ -11,7 +11,20 @@
 }
 
 body {
-    background-color: #d8dbd5;
+    background-image: linear-gradient(
+    to bottom,
+    #009688 0vh, 
+    #009688 15vh,
+    #dddbd1 15vh,
+    #d2dbdc 100%) ;
+    width: 100%;
+    height: 100vh;
+    font-family: "lato" , sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden ;
+    font-size: 100%;
 }
 
 #sfondo-azzurro {
@@ -19,10 +32,9 @@ body {
 }
 
 .container {
-    width: 80vw;
-    height: 95vh;
-    min-width: 50%;
-    margin: 1rem auto;
+    width: 80%;
+    height: 95%;
+    min-width: 900px;
     background-color: cadetblue;
 }
 
@@ -65,8 +77,6 @@ i {
 
 .fa-bell-slash {
     color: #8edafc;
-
-
 }
 
 #contenitore-tondo {
@@ -93,48 +103,55 @@ i {
     align-items: center;
 }
 
+.strip-bianco {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .strip-ricerca {
     width: 100%;
     height: 40px;
     background-color: #eaeaea;
 }
 
-.pulsante-ricerca {
-    background-color: white ;
-    border: none;
-    height: 80% ;
-}
+
 
 .barra-ricerca {
     height: 80%;
     width: 95%;
     border: none;
-    
+
 }
 
 .chat-centrale {
-    width: 100% ;
+    overflow-y: scroll;
+    width: 100%;
     padding-top: 2rem;
     height: calc(100% - 120px);
     background-image: url(../img/mine.jpg);
-    
+
 }
 
 .colonna-chat {
-    width: 80% ;
-    margin: 0 auto ;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .messaggio {
-    width: 50% ;
-    padding: 1rem ;
-    border-radius: 10px ;
-    
+    width: 50%;
+    padding: 1rem;
+    border-radius: 10px;
+
 }
 
 .received {
-    background-color: white ;
+    background-color: white;
 }
+
 .sent {
     background-color: #d5f9ba;
 }
