@@ -174,6 +174,16 @@ const app = new Vue(
             selettore: function (index) {
                 this.utenteSelezionato = index;
             },
+
+            risposta: function () {
+                const nuovaRisposta = {
+                    message: "ok",
+                    status: 'received',
+                    date: new Date(),
+                };
+                this.contacts[this.utenteSelezionato].messages.push(nuovaRisposta);
+            },
+
             inserisci: function () {
                 const newMessage = {
                     message: this.testoInserito,
@@ -182,6 +192,7 @@ const app = new Vue(
                 };
                 this.contacts[this.utenteSelezionato].messages.push(newMessage);
                 this.testoInserito = "";
+                setTimeout(this.risposta, 1000)
             },
         }
     })
