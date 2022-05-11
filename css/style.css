@@ -11,19 +11,18 @@
 }
 
 body {
-    background-image: linear-gradient(
-    to bottom,
-    #009688 0vh, 
-    #009688 15vh,
-    #dddbd1 15vh,
-    #d2dbdc 100%) ;
+    background-image: linear-gradient(to bottom,
+            #009688 0vh,
+            #009688 15vh,
+            #dddbd1 15vh,
+            #d2dbdc 100%);
     width: 100%;
     height: 100vh;
-    font-family: "lato" , sans-serif;
+    font-family: "lato", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden ;
+    overflow: hidden;
     font-size: 100%;
 }
 
@@ -61,7 +60,6 @@ body {
 .contenitore-avatar {
     display: flex;
     align-items: center;
-
 }
 
 .contenitore-icone {
@@ -118,13 +116,10 @@ i {
     background-color: #eaeaea;
 }
 
-
-
 .barra-ricerca {
     height: 80%;
     width: 95%;
     border: none;
-
 }
 
 .chat-centrale {
@@ -133,25 +128,33 @@ i {
     padding-top: 2rem;
     height: calc(100% - 120px);
     background-image: url(../img/mine.jpg);
-
 }
 
 .colonna-chat {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    
+}
+
+.allineato-destra {
+    justify-content: flex-end;
 }
 
 .messaggio {
     width: 50%;
     padding: 1rem;
     border-radius: 10px;
-
+    margin-bottom: 1rem;
 }
 
 .received {
     background-color: white;
+
 }
 
 .sent {
     background-color: #d5f9ba;
+
 }
+

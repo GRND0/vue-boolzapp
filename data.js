@@ -164,9 +164,24 @@ const app = new Vue(
                         }
                     ],
                 }
-            ]
+            ],
+
+            utenteSelezionato: 0,
+            testoInserito: "",
+        },
+
+        methods: {
+            selettore: function (index) {
+                this.utenteSelezionato = index;
+            },
+            inserisci: function () {
+                const newMessage = {
+                    message: this.testoInserito,
+                    status: 'sent',
+                    date: new Date(),
+                };
+                this.contacts[this.utenteSelezionato].messages.push(newMessage);
+                this.testoInserito = "";
+            },
         }
-    }
-)
-
-
+    })
