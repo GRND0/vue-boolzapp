@@ -24,12 +24,15 @@
 
                     <div class="contenitore-avatar ">
                         <img class="avatar" :src="'img/avatar'+contacts[utenteSelezionato].avatar+'.jpg'" alt="">
-                        <span>{{contacts[utenteSelezionato].name}}</span>
+                        <div class="testo-notifiche">
+                            <h3>{{contacts[utenteSelezionato].name}}</h3>
+                            <span>Ultimo accesso oggi alle 12:00</span>
+                        </div>
                     </div>
 
-                    <div class="contenitore-icone ">
-                        <i class="fas fa-circle-notch"></i>
-                        <i class="fas fa-comment-alt"></i>
+                    <div class="contenitore-icone-destro">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
@@ -41,8 +44,6 @@
                     <div class="messaggio" :class="element.status">
                         <span>{{element.message}}</span>
                     </div>
-
-
                 </div>
 
 
@@ -50,14 +51,9 @@
             <div class="input-testo-chat">
                 <div class="strip">
                     <i class="fal fa-smile"></i>
-                    <input class="barra-ricerca" type="text" v-on:keyup.enter="inserisci()"
+                    <input class="barra-testo" type="text" v-on:keyup.enter="inserisci()"
                         placeholder="Scrivi un messaggio" v-model="testoInserito">
-
-
-
-                    <div class="contenitore-icone ">
-                        <i class="fas fa-microphone"></i>
-                    </div>
+                    <i class="fas fa-microphone"></i>
                 </div>
 
             </div>
@@ -83,19 +79,27 @@
                 <div id="contenitore-tondo">
                     <i class="fas fa-bell-slash"></i>
                 </div>
-
+                <div class="testo-notifiche">
+                    <h3>Ricevi notifiche dei nuovi messaggi</h3>
+                    <a href="https://www.w3schools.com/html/">Attiva notifiche desktop</a>
+                </div>
             </div>
             <div class="strip-ricerca">
-                <label for="search"><i class="fa fa-search"></i></label>
-                <input class="barra-ricerca" v-on:keyup="filtro"  type="text" v-model="ricercaContatti"
-                    placeholder="Cerca o inizia una nuova chat">
-
+                <div class="barra-icona-ricerca">
+                    <label for="search"><i class="fa fa-search"></i></label>
+                    <input class="barra-ricerca" v-on:keyup="filtro" type="text" v-model="ricercaContatti"
+                        placeholder="Cerca o inizia una nuova chat">
+                </div>
             </div>
             <div class="contenitore-contatti">
-                <div class="strip-bianco" v-if="element.visible" @click="selettore(index)" v-for="(element,index) in contacts">
+                <div class="strip-bianco" v-if="element.visible" @click="selettore(index)"
+                    v-for="(element,index) in contacts">
                     <div class="contenitore-avatar ">
                         <img class="avatar" :src="'img/avatar'+ element.avatar +'.jpg'" alt="">
-                        <span>{{ element.name }}</span>
+                        <div class="testo-notifiche">
+                            <h3>{{ element.name }}</h3>
+                            <span>Ultimo messaggio inviato</span>
+                        </div>
 
                     </div>
 
