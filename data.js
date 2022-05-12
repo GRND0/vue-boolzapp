@@ -176,8 +176,14 @@ const app = new Vue(
                 this.utenteSelezionato = index;
             },
 
-            filtro: function() {
-
+            filtro: function () {
+                this.contacts.forEach((item) => {
+                    const nome = item.name.toLowerCase();
+                    const ricerca = this.ricercaContatti.toLowerCase();
+                    if (nome.includes(ricerca)) {
+                        item.visible = true
+                    } else {item.visible = false}
+                }) 
             },
 
             risposta: function () {
