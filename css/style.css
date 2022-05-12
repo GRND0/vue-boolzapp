@@ -208,9 +208,12 @@ a {
 
 .messaggio {
     max-width: 50%;
+    min-width: 30%;
     padding: 1rem;
     border-radius: 10px;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .received {
@@ -222,3 +225,20 @@ a {
     background-color: #d5f9ba;
 
 }
+
+.data {
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: grey;
+    margin-right: 1rem;
+}
+
+.data-messaggio {
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: grey;
+    align-self: flex-end;
+   
+
+}
+

@@ -43,6 +43,7 @@
                     v-for="(element,index) in contacts[utenteSelezionato].messages">
                     <div class="messaggio" :class="element.status">
                         <span>{{element.message}}</span>
+                        <p class="data-messaggio">12:00</p>
                     </div>
                 </div>
 
@@ -101,8 +102,9 @@
                             <span>Ultimo messaggio inviato</span>
                         </div>
 
-                    </div>
 
+                    </div>
+                    <p class="data">12:00</p>
 
                 </div>
             </div>
